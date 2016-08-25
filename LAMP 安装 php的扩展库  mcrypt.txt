@@ -1,0 +1,7 @@
+Centos 中  LAMP 安装 php的扩展库  mcrypt
+
+401  rpm -ivh http://mirrors.sohu.com/fedora-epel/7/x86_64/e/epel-release-7-8.noarch.rpm
+  402  yum update
+  403  yum repolist
+  404  yum install php-mcrypt
+  405  systemctl restart httpd.service
