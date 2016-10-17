@@ -1,0 +1,24 @@
+﻿定时计划     2016/10/17
+第一步
+vi /root/crontab.test/minute.sh
+#---------------------  保存以下脚本
+#! /bin/sh
+strDay=`date +"%Y-%m-%d"`;
+strTime=`date +"%H:%M:%S"`;
+echo "日期：" $strDay "          时间：" $strTime "#每分钟自动的执行一次" >> /tmp/log-minute.log;
+#echo "日期：" $strDay "          时间：" $strTime "#每分钟自动的执行一次"
+
+第二步  执行命令
+crontab -e
+#--------- 输入以下内容，并保存
+*/1 * * * * /root/crontab.test/minute.sh
+*/1 * * * * /home/samson/crontabtest/test.sh
+
+
+第三步  执行命令
+#----------- 启动定时计划服务 
+service crond start
+
+
+
+
