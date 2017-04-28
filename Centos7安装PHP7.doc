@@ -1,0 +1,35 @@
+
+        <html xmlns:v="urn:schemas-microsoft-com:vml"
+        xmlns:o="urn:schemas-microsoft-com:office:office"
+        xmlns:w="urn:schemas-microsoft-com:office:word"
+        xmlns="http://www.w3.org/TR/REC-html40">
+        <head><meta http-equiv=Content-Type content="text/html;  
+        charset=utf-8">
+		<style type="text/css">
+			table  
+			{  
+				border-collapse: collapse;
+				border: none;  
+				width: 100%;  
+			}  
+			td  
+			{  
+				border: solid #CCC 1px;  
+			}  
+			.codestyle{
+				word-break: break-all;
+				background:silver;mso-highlight:silver;
+			}
+		</style>
+        <meta name=ProgId content=Word.Document>
+        <meta name=Generator content="Microsoft Word 11">
+        <meta name=Originator content="Microsoft Word 11">
+        <xml><w:WordDocument><w:View>Print</w:View></xml></head>
+        <body><h1>1、Centos7安装PHP7</h1><div style="margin-left:20px;"><p>1.如果之前已经安装我们先卸载一下</p>
+<table width='100%' class='codestyle'><pre><code>yum -y remove ...</code></pre></table>
+<p>2.由于linux的yum源中的php不是最新版本，所以我们使用https://webtatic.com/的yum源来安装，可以直接参考https://webtatic.com/packages/php70/</p>
+<table width='100%' class='codestyle'><pre><code>rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm</code></pre></table>
+<p>3.现在我们来安装php,或者php-fpm</p>
+<table width='100%' class='codestyle'><pre><code>yum -y install php70w php70w-bcmath php70w-cli php70w-common php70w-dba php70w-devel php70w-embedded php70w-enchant php70w-fpm php70w-gd php70w-imap php70w-interbase php70w-intl php70w-ldap php70w-mbstring php70w-mcrypt php70w-mysql php70w-mysqlnd php70w-odbc php70w-opcache php70w-pdo php70w-pdo_dblib php70w-pear php70w-pecl-apcu php70w-pecl-imagick php70w-pecl-xdebug php70w-pgsql php70w-phpdbg php70w-process php70w-pspell php70w-recode php70w-snmp php70w-soap php70w-tidy php70w-xml  php70w-xmlrpc --skip-broken</code></pre></table>
+<p>引用 <a href="http://blog.csdn.net/dxywx/article/details/50609137">http://blog.csdn.net/dxywx/article/details/50609137</a></p></div></body></html>
